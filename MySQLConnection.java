@@ -1,12 +1,8 @@
-package com.globant.bootcamp.exercise2;
+package com.globant.bootcamp.exercise3;
 
-public class MySQLConnection implements DBConnection {
+public class MySQLConnection extends ConnectionAccess {
 
-	@Override
-	public void establishConnection() {
-
-		System.out.println("Establishing connection to MySQL...\nPlease wait until it is done.");
-
+	public MySQLConnection() {
 	}
 
 }
