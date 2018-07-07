@@ -1,6 +1,5 @@
 package com.globant.boopcamp;
 
-import main.App;
 import org.apache.log4j.Logger;
 
 /**
@@ -9,7 +8,7 @@ import org.apache.log4j.Logger;
  */
 public class UnitTestApp {
     
-    static Logger log = Logger.getLogger(App.class);
+    static Logger log = Logger.getLogger(UnitTestApp.class);
 
   public static void main( String[] args ){
     log.debug( "Maven dependency log4j..." );
