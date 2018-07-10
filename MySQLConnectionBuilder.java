@@ -1,24 +1,36 @@
-package com.globant.bootcamp.exercise4;
+package com.globant.bootcamp.builder;
 
-public class MySQLConnectionBuilder implements ConnectionBuilder {
+public class MySQLConnectionBuilder implements DataBaseConnectionBuilder {
 
-	private DatabaseConnection databaseConnection;
+	private DataBaseConnection connection;
 
 	public MySQLConnectionBuilder() {
 
-		databaseConnection = new DatabaseConnection();
+		connection = new DataBaseConnection();
 
 	}
 
-	@Override
-	public void buildConnectionString() {
-		databaseConnection.setConnectionString("jdbc:mysql://HOST/DATABASE\r\n" + "com.mysql.jdbc.Driver");
+	public void buildConnectionString(String connectionString) {
+
+		connection.setConnectionString(connectionString);
 
 	}
 
-	@Override
-	public DatabaseConnection getDatabaseConnection() {
-		return databaseConnection;
+	public void buildUser(String user) {
+
+		connection.setUser(user);
+
+	}
+
+	public void buildPassword(String password) {
+
+		connection.setPassword(password);
+	}
+
+	public DataBaseConnection getDataBaseConnection() {
+
+		return connection;
+
 	}
 
 }

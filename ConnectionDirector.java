@@ -1,24 +1,26 @@
-package com.globant.bootcamp.exercise4;
+package com.globant.bootcamp.builder;
 
 public class ConnectionDirector {
 
-	private ConnectionBuilder connectionBuilder = null;
+	private DataBaseConnectionBuilder connectionBuilder = null;
 
-	public ConnectionDirector(ConnectionBuilder connectionBuilder) {
+	public ConnectionDirector(DataBaseConnectionBuilder connectionBuilder) {
 
 		this.connectionBuilder = connectionBuilder;
 
 	}
 
-	public void constructConnection() {
+	public void constructConnection(String connectionString, String user, String password) {
 
-		connectionBuilder.buildConnectionString();
+		connectionBuilder.buildConnectionString(connectionString);
+		connectionBuilder.buildUser(user);
+		connectionBuilder.buildPassword(password);
 
 	}
 
-	public DatabaseConnection getDatabaseConnection() {
+	public DataBaseConnection getDataBaseConnection() {
 
-		return connectionBuilder.getDatabaseConnection();
+		return connectionBuilder.getDataBaseConnection();
 
 	}
 

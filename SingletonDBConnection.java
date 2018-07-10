@@ -1,4 +1,4 @@
-package com.globant.bootcamp.exercise1;
+package com.globant.bootcamp.Singleton;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
